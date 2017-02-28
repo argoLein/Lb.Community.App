@@ -7,5 +7,15 @@
 </ion-header>
 
 <ion-content padding>
+  <ion-list radio-group>
+  <ion-list-header>
+    {{title}}
+  </ion-list-header>
 
+  <ion-item *ngFor="let item of getRadioItems()">
+    <ion-label>{{item}}</ion-label>
+    <ion-radio checked="{{isGoDefault}}" value="{{item}}"></ion-radio>
+  </ion-item>
+
+</ion-list>
 </ion-content>

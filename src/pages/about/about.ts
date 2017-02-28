@@ -8,8 +8,16 @@ import { NavController } from 'ionic-angular';
 })
 export class AboutPage {
 
-  constructor(public navCtrl: NavController) {
+  title: string;
+  isGoDefault: boolean;
 
+  constructor(public navCtrl: NavController, ) {
+    this.title = "My Radio Buttons";
+    this.isGoDefault = false;
+  } 
+
+  getRadioItems() : string[] {
+    return ["Val1", "Val2", "Val2"];
   }
 
 }
